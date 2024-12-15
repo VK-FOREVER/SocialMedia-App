@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'dart:io';
 
 import 'package:flutter/cupertino.dart';
@@ -52,17 +54,12 @@ class PostsViewModel extends ChangeNotifier {
   }
 
   setPost(PostModel post) {
-    if (post != null) {
-      description = post.description;
-      imgLink = post.mediaUrl;
-      location = post.location;
-      edit = true;
-      edit = false;
-      notifyListeners();
-    } else {
-      edit = false;
-      notifyListeners();
-    }
+    description = post.description;
+    imgLink = post.mediaUrl;
+    location = post.location;
+    edit = true;
+    edit = false;
+    notifyListeners();
   }
 
   setUsername(String val) {

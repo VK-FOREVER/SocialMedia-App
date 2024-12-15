@@ -112,7 +112,7 @@ class UserPost extends StatelessWidget {
                                       QuerySnapshot snap = snapshot.data!;
                                       List<DocumentSnapshot> docs = snap.docs;
                                       return buildLikesCount(
-                                          context, docs.length ?? 0);
+                                          context, docs.length);
                                     } else {
                                       return buildLikesCount(context, 0);
                                     }
@@ -132,7 +132,7 @@ class UserPost extends StatelessWidget {
                                   QuerySnapshot snap = snapshot.data!;
                                   List<DocumentSnapshot> docs = snap.docs;
                                   return buildCommentsCount(
-                                      context, docs.length ?? 0);
+                                      context, docs.length);
                                 } else {
                                   return buildCommentsCount(context, 0);
                                 }
@@ -148,8 +148,10 @@ class UserPost extends StatelessWidget {
                             child: Text(
                               '${post?.description ?? ""}',
                               style: TextStyle(
-                                color:
-                                    Theme.of(context).textTheme.caption!.color,
+                                color: Theme.of(context)
+                                    .textTheme
+                                    .bodySmall!
+                                    .color,
                                 fontSize: 15.0,
                               ),
                               maxLines: 2,

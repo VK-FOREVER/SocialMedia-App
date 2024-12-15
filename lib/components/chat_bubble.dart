@@ -50,6 +50,7 @@ class _ChatBubbleWidgetState extends State<ChatBubbleWidget> {
   Widget build(BuildContext context) {
     final align =
         widget.isMe! ? CrossAxisAlignment.end : CrossAxisAlignment.start;
+    // ignore: unused_local_variable
     final radius = widget.isMe!
         ? BorderRadius.only(
             topLeft: Radius.circular(5.0),
@@ -90,7 +91,7 @@ class _ChatBubbleWidgetState extends State<ChatBubbleWidget> {
                         style: TextStyle(
                           color: widget.isMe!
                               ? Colors.white
-                              : Theme.of(context).textTheme.headline6!.color,
+                              : Theme.of(context).textTheme.titleLarge!.color,
                         ),
                       )
                     : CachedNetworkImage(
@@ -117,7 +118,7 @@ class _ChatBubbleWidgetState extends State<ChatBubbleWidget> {
             child: Text(
               timeago.format(widget.time!.toDate()),
               style: TextStyle(
-                color: Theme.of(context).textTheme.headline6!.color,
+                color: Theme.of(context).textTheme.titleLarge!.color,
                 fontSize: 10.0,
               ),
             ),

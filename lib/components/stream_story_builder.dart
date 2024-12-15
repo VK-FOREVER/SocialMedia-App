@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:social_media_app/widgets/indicators.dart';
@@ -15,7 +17,6 @@ class StreamStoriesWrapper extends StatelessWidget {
   final bool? reverse;
   final ScrollPhysics physics;
   final EdgeInsets padding;
-  
 
   const StreamStoriesWrapper({
     Key? key,
@@ -62,32 +63,32 @@ class StreamStoriesWrapper extends StatelessWidget {
   buildUploadButton() {
     return Padding(
       padding: EdgeInsets.all(7.0),
-        child: Container(
-          decoration: BoxDecoration(
-            color: Colors.blue,
-            shape: BoxShape.circle,
-            border: Border.all(
-              color: Colors.transparent,
-            ),
-            boxShadow: [
-              BoxShadow(
-                color: Colors.grey.withOpacity(0.3),
-                offset: new Offset(0.0, 0.0),
-                blurRadius: 2.0,
-                spreadRadius: 0.0,
-              ),
-            ],
+      child: Container(
+        decoration: BoxDecoration(
+          color: Colors.blue,
+          shape: BoxShape.circle,
+          border: Border.all(
+            color: Colors.transparent,
           ),
-          child: Padding(
-            padding: const EdgeInsets.all(0.5),
-            child: CircleAvatar(
-              radius: 25.0,
-              backgroundColor: Colors.grey[300],
-              child: Center(
-                child: Icon(Icons.add, color: Colors.blue),
-              ),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.grey.withOpacity(0.3),
+              offset: new Offset(0.0, 0.0),
+              blurRadius: 2.0,
+              spreadRadius: 0.0,
+            ),
+          ],
+        ),
+        child: Padding(
+          padding: const EdgeInsets.all(0.5),
+          child: CircleAvatar(
+            radius: 25.0,
+            backgroundColor: Colors.grey[300],
+            child: Center(
+              child: Icon(Icons.add, color: Colors.blue),
             ),
           ),
+        ),
       ),
     );
   }

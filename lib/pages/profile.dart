@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -262,8 +264,7 @@ class _ProfileState extends State<Profile> {
                                       QuerySnapshot<Object?>? snap =
                                           snapshot.data;
                                       List<DocumentSnapshot> docs = snap!.docs;
-                                      return buildCount(
-                                          "POSTS", docs.length ?? 0);
+                                      return buildCount("POSTS", docs.length);
                                     } else {
                                       return buildCount("POSTS", 0);
                                     }
@@ -289,7 +290,7 @@ class _ProfileState extends State<Profile> {
                                           snapshot.data;
                                       List<DocumentSnapshot> docs = snap!.docs;
                                       return buildCount(
-                                          "FOLLOWERS", docs.length ?? 0);
+                                          "FOLLOWERS", docs.length);
                                     } else {
                                       return buildCount("FOLLOWERS", 0);
                                     }
@@ -315,7 +316,7 @@ class _ProfileState extends State<Profile> {
                                           snapshot.data;
                                       List<DocumentSnapshot> docs = snap!.docs;
                                       return buildCount(
-                                          "FOLLOWING", docs.length ?? 0);
+                                          "FOLLOWING", docs.length);
                                     } else {
                                       return buildCount("FOLLOWING", 0);
                                     }

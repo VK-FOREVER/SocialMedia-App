@@ -1,6 +1,7 @@
+// ignore_for_file: deprecated_member_use, duplicate_ignore
+
 import 'dart:io';
 
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:image_cropper/image_cropper.dart';
 import 'package:image_picker/image_picker.dart';
@@ -40,6 +41,7 @@ class ConversationViewModel extends ChangeNotifier {
 
   pickImage({int? source, BuildContext? context, String? chatId}) async {
     PickedFile? pickedFile = source == 0
+        // ignore: deprecated_member_use
         ? await picker.getImage(
             source: ImageSource.camera,
           )
